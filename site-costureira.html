@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ateliê da Costura</title>
+<style>
+  :root {
+    --rosa: #d88c9a;
+    --rosa-escuro: #b5697a;
+    --creme: #fdf6f0;
+    --texto: #3a2e2e;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--creme);
+    color: var(--texto);
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, var(--rosa), var(--rosa-escuro));
+    color: white;
+    text-align: center;
+    padding: 60px 20px 50px;
+  }
+  header h1 {
+    font-size: 2.5em;
+    letter-spacing: 1px;
+  }
+  header p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    opacity: 0.95;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: white;
+    padding: 14px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    z-index: 10;
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--rosa-escuro);
+    font-weight: bold;
+  }
+  section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  h2 {
+    text-align: center;
+    color: var(--rosa-escuro);
+    margin-bottom: 30px;
+    font-size: 1.8em;
+  }
+  #sobre p {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 1.05em;
+  }
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+  }
+  .item:hover { transform: translateY(-5px); }
+  .item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    background: #eee;
+  }
+  .item .legenda {
+    padding: 12px 14px;
+    font-size: 0.95em;
+    text-align: center;
+    color: var(--texto);
+  }
+  #contato {
+    background: white;
+    border-radius: 16px;
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 600px;
+  }
+  .redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .redes a {
+    text-decoration: none;
+    background: var(--rosa);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+  .redes a:hover { background: var(--rosa-escuro); }
+  #pedido {
+    background: white;
+    border-radius: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  }
+  #pedido label {
+    display: block;
+    margin-top: 16px;
+    font-weight: bold;
+    color: var(--rosa-escuro);
+  }
+  #pedido input,
+  #pedido select,
+  #pedido textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1em;
+  }
+  #pedido textarea { resize: vertical; min-height: 90px; }
+  #pedido button {
+    margin-top: 24px;
+    width: 100%;
+    padding: 14px;
+    background: var(--rosa);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.05em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  #pedido button:hover { background: var(--rosa-escuro); }
+  footer {
+    text-align: center;
+    padding: 25px;
+    background: var(--rosa-escuro);
+    color: white;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ateliê da Costura</h1>
+  <p>Roupas feitas à mão, com carinho e capricho</p>
+</header>
+
+<nav>
+  <a href="#sobre">Sobre</a>
+  <a href="#trabalhos">Trabalhos</a>
+  <a href="#pedido">Fazer Pedido</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section id="sobre">
+  <h2>Sobre o Ateliê</h2>
+  <p>
+    Aqui você encontra peças costuradas à mão com atenção a cada detalhe.
+    Ajustes, consertos, roupas sob medida e muito mais — tudo feito
+    pensando em qualidade e no seu estilo.
+    <!-- Troque esse texto pela apresentação da sua mãe -->
+  </p>
+</section>
+
+<section id="trabalhos">
+  <h2>Meus Trabalhos</h2>
+  <div class="galeria">
+    <div class="item">
+      <!-- Troque o src abaixo pelo link da imagem -->
+      <img src="COLE_AQUI_O_LINK_DA_IMAGEM_1.jpg" alt="Trabalho 1">
+      <div class="legenda">Descrição da peça</div>
+    </div>
+    <div class="item">
+      <img src="COLE_AQUI_O_LINK_DA_IMAGEM_2.jpg" alt="Trabalho 2">
+      <div class="legenda">Descrição da peça</div>
+    </div>
+    <div class="item">
+      <img src="COLE_AQUI_O_LINK_DA_IMAGEM_3.jpg" alt="Trabalho 3">
+      <div class="legenda">Descrição da peça</div>
+    </div>
+    <div class="item">
+      <img src="COLE_AQUI_O_LINK_DA_IMAGEM_4.jpg" alt="Trabalho 4">
+      <div class="legenda">Descrição da peça</div>
+    </div>
+  </div>
+</section>
+
+<section style="display:flex; justify-content:center;">
+  <div id="pedido">
+    <h2>Fazer um Pedido</h2>
+    <p style="text-align:center;">Preencha abaixo e o pedido vai direto pro meu WhatsApp.</p>
+
+    <label for="nome">Seu nome</label>
+    <input type="text" id="nome" placeholder="Como posso te chamar?">
+
+    <label for="tipo">Tipo de serviço</label>
+    <select id="tipo">
+      <option value="Encomenda de peça nova">Encomenda de peça nova</option>
+      <option value="Conserto / ajuste de peça">Conserto / ajuste de peça</option>
+      <option value="Outro">Outro</option>
+    </select>
+
+    <label for="descricao">Descreva o que você precisa</label>
+    <textarea id="descricao" placeholder="Ex: preciso ajustar a barra de uma calça, ou quero encomendar um vestido..."></textarea>
+
+    <button onclick="enviarPedido()">Enviar pelo WhatsApp</button>
+  </div>
+</section>
+
+<section style="display:flex; justify-content:center;">
+  <div id="contato">
+    <h2>Fale Comigo</h2>
+    <p>Entre em contato para orçamentos, dúvidas ou encomendas!</p>
+    <div class="redes">
+      <!-- Troque os links abaixo pelos reais -->
+      <a href="https://wa.me/55SEUNUMEROAQUI" target="_blank">WhatsApp</a>
+      <a href="https://instagram.com/SEUUSUARIO" target="_blank">Instagram</a>
+      <a href="https://facebook.com/SUAPAGINA" target="_blank">Facebook</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Ateliê da Costura — Feito com carinho
+</footer>
+
+<script>
+  function enviarPedido() {
+    const nome = document.getElementById('nome').value.trim();
+    const tipo = document.getElementById('tipo').value;
+    const descricao = document.getElementById('descricao').value.trim();
+
+    if (!descricao) {
+      alert('Por favor, descreva o que você precisa.');
+      return;
+    }
+
+    // Troque o número abaixo pelo número real (com DDI 55 e DDD, só números)
+    const numero = "55SEUNUMEROAQUI";
+
+    let mensagem = `Olá! Meu nome é ${nome || "(não informado)"}.\n`;
+    mensagem += `Tipo de serviço: ${tipo}\n`;
+    mensagem += `Detalhes: ${descricao}`;
+
+    const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+    window.open(link, '_blank');
+  }
+</script>
+
+</body>
+</html>
